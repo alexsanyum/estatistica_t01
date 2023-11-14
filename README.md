@@ -11,7 +11,7 @@ A presente trabalho tem como objetivo a fixação das ideias introduzidas até a
   <strong>Tabela 1.</strong> Descrição das variáveis aleatórias. 
 </div>
 
-|Variaveil                  |  Arquivo  | Distribuição |
+|Variável                  |  Arquivo  | Distribuição |
 |:----------------------------|:-------------|:----------------:|
 |$`Q\backsim\mathbb{N}(3,3) `$    |  _data1q.dat_ |      Normal  |
 |$` X\backsim\mathbb{U}[0,6] `$    |  _data1x.dat_ |     Uniforme     |
