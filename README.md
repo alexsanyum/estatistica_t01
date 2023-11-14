@@ -196,9 +196,8 @@ No caso que $W$ e uma normal, $`S^{2}`$ tem uma distribuição conhecida. Na aul
 
 
 <img src = 'plots/chi2_hist.png'>
-<div align="center">
-  <strong>Figura 6.</strong> Frequencias relativas $`[\frac{n-1}{\sigma ^{2}}]S^{2}`$ para nas variancias amostrails do $`\overline{Q}_{n}`$ . 
-</div>
+
+**Figura 6.** Frequencias relativas $`[\frac{n-1}{\sigma ^{2}}]S^{2}`$ para nas variancias amostrails do $`\overline{Q}_{n}`$. 
 
 Hemos visto que para o caso da média amostral esta se aproxima a uma normal onde na média e na mesma que nas distribuições originais, e para o caso da variância amostral, na expectância de estas é igual a variância original, com isso podemos verificar que o TLC se cumpre.
 
