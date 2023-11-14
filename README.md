@@ -32,7 +32,7 @@ Todas as equações para o cálculo de expectância e da variância são definid
 | $`E[N] =\mu`$                       | $`E[\mathbb{U}] = \frac{a+b}{2}`$        | $`E[\mathbb{Y}] = \frac{1}{\gamma}`$     | $`E[\mathbb{B}] = Np`$        |
 | $`V[N] =\sigma^2`$                  | $`V[\mathbb{U}] = \frac{(b-a)^{2}}{12}`$ | $`V[\mathbb{Y}] = \frac{1}{\gamma^{2}}`$ | $`E[\mathbb{B}] = Np(1-p)`$   |
 
-Com nas equações definidas, podemos calcular os valores de expectância e variância teóricos de cada variável aleatória. Os cálculos são mostrados abaixo.
+Com as equações definidas, podemos calcular os valores de expectância e variância teóricos de cada variável aleatória. Os cálculos são mostrados abaixo.
 <div align="center">
   <strong>Tabela 2.2.</strong> Valores de expectância e variância teóricas para as variáveis aleatórias. 
 </div>
@@ -49,7 +49,7 @@ Com nas equações definidas, podemos calcular os valores de expectância e vari
 
 **(b)** Utilize o R (ou outro programa) para ler cada arquivo e calcule estimativas para a média e a variância do conjunto de dados (usando todos os dados disponíveis nos arquivos). Em seguida, compare com os resultados obtidos no exercício anterior. Faça comentários.
 
-Os dados foram lidos e analisados em Python usando nas bibliotecas ```numpy``` e ```pandas```. Os cálculos de mádia e variâncias foram feitos com os métodos ```.mean()``` e ```.var(ddof=1)``` onde ddof especifica os graus de liberdade. Quando ddof=1, no método calcula na variância amostral. Os valores estimados são mostrados e comparadas na tabela 3.
+Os dados foram lidos e analisados em Python usando as bibliotecas ```numpy``` e ```pandas```. Os cálculos de média e variâncias foram feitos com os métodos ```.mean()``` e ```.var(ddof=1)``` onde ddof especifica os graus de liberdade. Quando ddof=1, no método calcula na variância amostral. Os valores estimados são mostrados e comparadas na tabela 3.
 
 <div align="center">
   <strong>Tabela 3.</strong> Médias e variâncias teóricas e estimadas. 
@@ -62,13 +62,13 @@ Os dados foram lidos e analisados em Python usando nas bibliotecas ```numpy``` e
 |data1y| 	3.0 	|9.0 	|3.002258   |9.044840   |-0.002258   |-0.044840|
 |data1t| 	3.0 	|2.1 	|3.003012   |2.105371   |-0.003012   |-0.005371|
 
-Al ter amostras do 500000 de cada variável aleatória, espera-se que os valores calculados se assemelham muito aos valores reais. Ainda os valores aproximados não são exatamente iguais aos teóricos, vemos que eles apenas diferem por três decimais na majoria de casos para nas mádias e variâncias, a excepção da variância do set de dados data1y onde na variância difere dor dois decimais. 
+Ao ter amostras de 500000 de cada variável aleatória, espera-se que os valores calculados se assemelhem muito aos valores reais. Ainda, os valores aproximados não são exatamente iguais aos teóricos, vemos que eles apenas diferem por três decimais na maioria de casos para as mádias e variâncias, à exceção da variância do set de dados data1y, onde a variância difere por dois decimais. 
 
 ---
 
 **(c)** Construa os histogramas com as frequências relativas de cada uma das variáveis, verificando se estes são condizentes com os modelos teóricos (Tabela 1).
 
-Nos histogramas foram construídos com na função ```histplot()``` da biblioteca ```seaborn``` especificando no parâmetro ```stat = 'density'``` que gera no histograma a partir de na frequência relativa dos dados. No caso do data1t, que vem de uma variável aleatória discreta, foi especificado ```stat = 'proportion'```. Os histogramas se mostram na Figura 1.
+Nos histogramas foram construídos com a função ```histplot()``` da biblioteca ```seaborn``` especificando o parâmetro ```stat = 'density'``` que gera o histograma a partir da frequência relativa dos dados. No caso do data1t, que vem de uma variável aleatória discreta, foi especificado ```stat = 'proportion'```. Os histogramas são mostrados na Figura 1.
 
 ![Histogramas](plots/histograms_datasets.png)
 <div align="center">
@@ -76,11 +76,11 @@ Nos histogramas foram construídos com na função ```histplot()``` da bibliotec
 </div>
 
 
-Na Figura 1, nos podemos observar os histogramas de todos os sets de dados, onde nas linhas magentas representam na expectância e variância teóricas, e as linhas petras os valores estimados. Las linhas azuis mostram nas respectivas funções de densidade de probabilidade. Na caso do data1t, os pontos azuis representam na função massa de probabilidade.
+Na Figura 1, podemos observar os histogramas de todos os sets de dados, onde as linhas magentas representam a expectância e variância teóricas, e as linhas pretas os valores estimados. As linhas azuis mostram as respectivas funções de densidade de probabilidade. No caso do data1t, os pontos azuis representam a função massa de probabilidade.
 
-Observamos que todos os histogramas se ajustam a sus PDFs, médias e variâncias teóricas. Como era de esperar, em todos os gráficos nas médias e variâncias teóricas y estimadas se sobrepõem entre si. No caso de dataset1q, vemos que no histograma tem uma forma gaussiana simétrica, característica de uma distribuição normal. Para na distribuição uniforme, o histograma mostra uma frequência quase constante em el intervalo de valores de 0 a 6, o que se ajusta a seu PDF teórico. No conjunto de dados datasety, este solo contem valores positivos, onde na frequência decresce ao longo do eixo x, o que se ajusta a uma distribuição exponencial com $`\gamma = 1/3`$. Finalmente, no data1t vemos que no histograma só tem barras nos valores inteiros. Este comportamento é esperado, já que os dados vêm de uma distribuição binomial que é uma variável discreta.
+Observamos que todos os histogramas se ajustam às PDFs, médias e variâncias teóricas. Como era de esperar, em todos os gráficos as médias e variâncias teóricas e estimadas se sobrepõem entre si. No caso de data1q, vemos que o histograma tem uma forma gaussiana simétrica, característica de uma distribuição normal. Para a distribuição uniforme, o histograma mostra uma frequência quase constante em el intervalo de valores de 0 a 6, o que se ajusta ao seu PDF teórico. No conjunto de dados datasety, este solo contem valores positivos, onde na frequência decresce ao longo do eixo x, o que se ajusta a uma distribuição exponencial com $`\gamma = 1/3`$. Finalmente, no data1t vemos que o histograma só tem barras nos valores inteiros. Este comportamento é esperado, já que os dados vêm de uma distribuição binomial que é uma variável discreta.
 
-Com isto, nos podemos confirmar na hipótese de que cada set de dados vêm de nas distribuições especificadas na Tabela 1.
+Com isto, podemos confirmar a hipótese de que cada set de dados vem de distribuições especificadas na Tabela 1.
 
 ---
 
@@ -94,7 +94,7 @@ $`S_{W_{n}}^{2}= \frac{1}{n-1}\sum_{i=1}^{n}(W_{i} - \overline{W}_{n})^2`$
 
 onde $`W = Q,X,Y`$ ou $`T`$. Use 10000 amostras simples (pontos amostrais) para gerar as variáveis aleatórias médias amostral e variância amostral. Obs.: Lembre-se das características que as amostras aleatórias devem ter. Apresente o código.
 
-Na função ```construc_rand_var()``` permite gerar _m_ pontos amostrais para um set de dados, e um valor de n específico. Na função utiliza no bucle for para (1) tomar n valores aleatórios do set de dados como um numpy array, (2) calcular na média e a variância amostral usando os métodos ```.mean()``` e ```.var(ddof = 1)```, (3) e salvar os valores calculados em um dicionário.
+Na função ```construc_rand_var()``` permite gerar _m_ pontos amostrais para um set de dados, e um valor de n específico. Na função utiliza um bucle for para (1) tomar n valores aleatórios do set de dados como um numpy array, (2) calcular a média e a variância amostral usando os métodos ```.mean()``` e ```.var(ddof = 1)```, (3) e salvar os valores calculados em um dicionário.
 
 
 ```python
@@ -120,7 +120,7 @@ def construc_rand_var(dataset,n,m):
     return xbar_values
 ```
 
-Além de isso, na função ```construct_n_rand_var()``` permite usar na função anterior para uma lista de valores de n (i.e n = [5,10,50]), retornando dois dataframes (uno para cada variável aleatória) onde cada coluna corresponda a um valor de n.
+Além disso, na função ```construct_n_rand_var()``` permite usar na função anterior para uma lista de valores de n (i.e n = [5,10,50]), retornando dois dataframes (um para cada variável aleatória) onde cada coluna corresponda a um valor de n.
 
 ```python
 def construct_n_rand_var(dataset, n_list, m):
@@ -145,7 +145,7 @@ def construct_n_rand_var(dataset, n_list, m):
     return df_means, df_vars
 ```
 
-No seguinte código mostra no uso de nas funções.
+No seguinte código mostra o uso das funções.
 
 ```python
 # Define n list and m value
@@ -161,7 +161,7 @@ mean_rv_dataq, var_rv_dataq = construct_n_rand_var(datasets['data1q'], n, m)
 
 **(e)** Usando o código da questão anterior, construa os histogramas de frequências das variáveis aleatórias **média amostral** e **variância amostral**, para os diferentes valores de $`n`$ e compare com as distribuições teóricas esperadas para estas variáveis. Faça isso para as variáveis (Q, X, T e Y).
 
-As duas funções mostradas no literal (d) foram usadas para gerar os 10000 pontos para cada variável aleatória em cada set de dados. Além de isso, de acordo no teorema de limite central, nas médias amostrais se aproximam a una distribuição normal $`\mathbb{N}(\mu,\sigma^{2}/n)`$. Nestas distribuições teóricas foram construídas com na biblioteca ```scipy.stats``` que tem na função ```.norm.pdf(x, mean, std)``` que permite construir na PDF de una distribuição normal em um array X com média e desvio padrão específicos. Esses valores foram obtidos da Tabela 2.2. 
+As duas funções mostradas no literal (d) foram usadas para gerar os 10000 pontos para cada variável aleatória em cada set de dados. Além disso, de acordo com oo teorema de limite central, as médias amostrais se aproximam a uma distribuição normal $`\mathbb{N}(\mu,\sigma^{2}/n)`$. Nestas distribuições teóricas foram construídas com a biblioteca ```scipy.stats``` que tem na função ```.norm.pdf(x, mean, std)``` que permite construir a PDF de uma distribuição normal em um array X com média e desvio padrão específicos. Esses valores foram obtidos da Tabela 2.2. 
 
 
 ![Histograma_Qn](plots/Qn_statistics.png)
@@ -186,25 +186,25 @@ As duas funções mostradas no literal (d) foram usadas para gerar os 10000 pont
 
 **(f)** Que tipo de distribuição as médias amostrais apresentam? Justifique com a teoria (_Teorema do Limite Central_) o resultando, apontando as hipóteses básicas. 
 
-O teorema do limite central (TLC) estabelece que na suma do $`n`$ variaveis independentes e identicamente distribuídas se aproxima a uma distribuição normal. No teorema também nos disse que na média de esa suma $`\overline{X}`$ (média amostral), se aproxima a  $`\mathbb{N} (\mu, \sigma^{2}/ n)`$. Também define no caso da variância amostral $`S^{2}`$,tem uma expectância igual a de variáveis originais E$`[S^{2}] = \sigma^2`$. Se tomarmos como hipótese de que o TLC é certo, nós deveríamos poder comprovar estas definições de média e variância amostral empiricamente. Nós fizemos isto neste trabalho, onde construímos médias e variâncias amostrais a partir de diferentes distribuições conhecidas.
+O teorema do limite central (TLC) estabelece que a suma do $`n`$ variaveis independentes e identicamente distribuídas se aproxima a uma distribuição normal. No teorema também nos disse que a média dessa suma $`\overline{X}`$ (média amostral), se aproxima a  $`\mathbb{N} (\mu, \sigma^{2}/ n)`$. Também define o caso da variância amostral $`S^{2}`$,com uma expectância igual á das variáveis originais E$`[S^{2}] = \sigma^2`$. Se tomarmos como hipótese de que o TLC é certo, deveríamos ser capazes de comprovar essas definições de média e variância amostral empiricamente. Fizemos isso neste trabalho, onde construímos médias e variâncias amostrais a partir de diferentes distribuições conhecidas.
 
-Nas médias amostrais (Figura 2-5, parte superior) se pode observar que todos os histogramas tem uma forma Gaussiana característica de uma distribuição normal. Vemos que na média teórica de variáveis aleatórias (Tabela 2.2) é muito próxima à média estimada para os dados do histograma (vemos uma sobreposição para as linhas pretas e megantes) cumprindo com o TLC para no caso de na média amostral. No caso do $\overline{Y}_{n}$ (Figura 4), vemos que para o $n=5$, ela ainda tem uma forma Gaussiana, ela não se ajusta completamente a na distribuição teórica. Isto se deve a que os dados do $Y$ vêm de uma distribuição exponencial onde os dados são assimétricos à izquierda. Esta assimetria pode causar que a média amostral con $n=5$ não se assemelha completamente a na normal esperada. Ao aumentar o tamanho de $`n`$, vemos que os dados se aproximam cada vez mais na distribuição teórica. O TLC estabelece que o $`n`$ debe ser suficientemente grande. No caso de $Y$, vemos que "o grande" varia em cada caso.Contrário a o caso das médias amostrais, na variância amostral não tem um padrão claro.
+Nas médias amostrais (Figura 2-5, parte superior) se pode observar que todos os histogramas tem uma forma Gaussiana característica de uma distribuição normal. Vemos que na média teórica de variáveis aleatórias (Tabela 2.2) é muito próxima à média estimada para os dados do histograma (vemos uma sobreposição para as linhas pretas e megantes) cumprindo com o TLC para no caso de na média amostral. No caso do $\overline{Y}_{n}$ (Figura 4), vemos que para o $n=5$, ela ainda tem uma forma Gaussiana, ela não se ajusta completamente à distribuição teórica. Isto se deve a que os dados do $Y$ vêm de uma distribuição exponencial onde os dados são assimétricos à esquerda. Esta assimetria pode causar que a média amostral com $n=5$ não se assemelha completamente a na normal esperada. Ao aumentar o tamanho de $`n`$, vemos que os dados se aproximam cada vez mais na distribuição teórica. O TLC estabelece que o $`n`$ deve ser suficientemente grande. No caso de $Y$, vemos que "o grande" varia em cada caso. Contrário ao caso das médias amostrais, a variância amostral não tem um padrão claro.
 
-Em os histogramas da $`S^{2}`$ (Figura 2-5) se observa um comportamento distinto em cada caso. Para de $n=5$, na variância amostral tem um comportamento distinto em cada variável aleatória. Para $\overline{Y}$, no histograma se assemelha a uma distribuição exponencial, enquanto $\overline{X}$ tem uma forma mais simétrica. No caso da $`S^{2}`$ para $\overline{T}$, ele não tem uma forma definida. Somente com $n=50$, todos os histogramas se parecem a uma normal. Ainda elas não têm um patrón definido, vemos que na média estimada do os dados e próxima a na variancia teorica, e dezir, E$`[S^{2}] = \sigma^2`$ se cumple.
+Em os histogramas da $`S^{2}`$ (Figura 2-5) se observa um comportamento distinto em cada caso. Para de $n=5$, na variância amostral tem um comportamento distinto em cada variável aleatória. Para $\overline{Y}$, no histograma se assemelha a uma distribuição exponencial, enquanto $\overline{X}$ tem uma forma mais simétrica. No caso da $`S^{2}`$ para $\overline{T}$, ele não tem uma forma definida. Somente com $n=50$, todos os histogramas se parecem a uma normal. Ainda não têm um padrão definido, vemos que a média estimada dos dados é próxima da variância teórica, e dezir, E$`[S^{2}] = \sigma^2`$ se cumple.
 
-No caso que $W$ e uma normal, $`S^{2}`$ tem uma distribuição conhecida. Na aula se mencionou que para este caso $`[\frac{n-1}{\sigma ^{2}}]S^{2}`$ tem uma distribuição de $`\chi ^{2}`$ con $`n-1`$ grados de liberdade. Na Figura 6 mostra os histogramas para os valores de $n=5,10,50$ conjuntamente con na PDF do $`\chi ^{2}`$ correspondiente. Vemos que, em efeito, os histogramas se ajustam a na distribuição teórica. Vemos também que a medida que $`n`$ aumenta, na forma de $`\chi ^{2}`$ se parece a uma distribuição normal. 
+No caso que $W$ e uma normal, $`S^{2}`$ tem uma distribuição conhecida. Na aula foi mencionado que, para este caso $`[\frac{n-1}{\sigma ^{2}}]S^{2}`$ tem uma distribuição de $`\chi ^{2}`$ com $`n-1`$ grados de liberdade. Na Figura 6 mostram-se os histogramas para os valores de $n=5,10,50$ conjuntamente com a PDF do $`\chi ^{2}`$ correspondiente. Vemos que, de fato, os histogramas se ajustam à distribuição teórica. Vemos também que à medida que $`n`$ aumenta, a forma de $`\chi ^{2}`$ se parece a uma distribuição normal. 
 
 
 <img src = 'plots/chi2_hist.png'>
 
-**Figura 6.** Frequencias relativas $`[\frac{n-1}{\sigma ^{2}}]S^{2}`$ para nas variancias amostrails do $`\overline{Q}_{n}`$.
+**Figura 6.** Frequencias relativas $`[\frac{n-1}{\sigma ^{2}}]S^{2}`$ para nas variâncias amostrails do $`\overline{Q}_{n}`$.
 
-Hemos visto que para o caso da média amostral esta se aproxima a uma normal onde na média e na mesma que nas distribuições originais, e para o caso da variância amostral, na expectância de estas é igual a variância original, com isso podemos verificar que o TLC se cumpre.
+Hemos visto que para o caso da média amostral ela se aproxima a uma normal onde a média é a mesma que nas distribuições originais, e para o caso da variância amostral, a expectância delas é igual à variância original, com isso podemos verificar que o TLC se cumpre.
 
 ---
 
 **(g)** Compare os histogramas, para os diferentes valores de $`n`$, e discuta os resultados.
 
-O TLC estabelece que para o caso de média amostral, está se ajusta a $`\mathbb{N} (\mu, \sigma^{2}/ n)`$. E dezir, a medida que aumenta $`n`$, na média se mantém e a variância diminui. Isto se pode comprovar em todos os casos. E nas Figuras 2-5 (parte superior), podemos observar que a média que $`n`$ aumenta, a variância vai diminuindo. De fato, a variância diminui tanto que para os histogramas de $`n=50`$ elas não se ressaltam já que elas se aproximavam muito ao valor da média que não permite distinguirla. Esta observação nos permite confirmar a teoria de o TLC. À medida que $`n`$ cresce, temos maior probabilidade  de tomar valores tão próximos de na média real.
-O TLC nos permite ver que não importa na distribuição original de dados, se temos um número grande de realizações/amostras/pontos, nos podemos aproximar nos á na média e variância original de os dados ainda sem conhecer como eles são realmente. No enunciado **(f)** vimos que o conceito do $`n`$ grande cambia de acordo a na complexidade de os dados. Para os casos de $`\overline{Q}_{n}`$, $`\overline{X}_{n}`$, e $`\overline{T}_{n}`$, com $`n=5`$ as médias amostrais se aproximava a na normal teórica, mientras que para $`\overline{Y}_{n}`$, esta se aproxima mejor con $`n=50`$. O TLC sempre se cumprirá à medida que $`n`$ aumenta, cuan "grande" deve ser dependerá de cada caso. 
+O TLC estabelece que para o caso de média amostral, ele se ajusta a $`\mathbb{N} (\mu, \sigma^{2}/ n)`$. E dezir, à medida que aumenta $`n`$, a média se mantém e a variância diminui. Isto pode ser  comprovado em todos os casos. E nas Figuras 2-5 (parte superior), podemos observar que à medida que $`n`$ aumenta, a variância vai diminuindo. De fato, à variância diminui tanto que para os histogramas de $`n=50`$ elas não se destacam, já que elas se aproximavam muito ao valor da média que não permite distingui-las. Esta observação nos permite confirmar a teoria do TLC. À medida que $`n`$ cresce, temos maior probabilidade  de tomar valores tão próximos de na média real.
+O TLC nos permite ver que não importa a distribuição original de dados, se temos um número grande de realizações/amostras/pontos, nos podemos aproximar nos á na média e variância original de os dados ainda sem conhecer como eles são realmente. No enunciado **(f)** vimos que o conceito de $`n`$ grande varia de acordo com a complexidade de dos dados. Para os casos de $`\overline{Q}_{n}`$, $`\overline{X}_{n}`$, e $`\overline{T}_{n}`$, com $`n=5`$ as médias amostrais se aproximava da normal teórica, mientras que para $`\overline{Y}_{n}`$, esta se aproxima melhor com $`n=50`$. O TLC sempre se cumprirá à medida que $`n`$ aumenta, quão "grande" deve ser dependerá de cada caso. 
 
