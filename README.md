@@ -20,7 +20,7 @@ A presente trabalho tem como objetivo a fixação das ideias introduzidas até a
 
 **(a)** Dado que conhecemos a distribuição de probabilidades de cada variável aleatória e os parâmetros que as caracterizam (Tabela 1), calcule a expectância e a variância (teóricas) de cada uma delas, usando as definições que vimos em aula.
 
-Todas as equações para el cálculo de expectância e variância são definidas na seguinte tabela.
+Todas as equações para o cálculo de expectância e da variância são definidas na seguinte tabela.
 
 <div align="center">
   <strong>Tabela 2.1:</strong> Equações de expectância e variância para as diferentes distribuições. 
