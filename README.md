@@ -90,8 +90,6 @@ Os histogramas foram construídos com a função ```histplot()``` da biblioteca 
   <strong>Figura 1.</strong> Histogramas das frequências relativas das variáveis aleatórias. 
 </div>
 <br></br>
-
-
 Na Figura 1, podemos observar os histogramas de todos os sets de dados, onde as linhas magentas representam a expectância e variância teóricas, e as linhas pretas os valores estimados. As linhas azuis mostram as respectivas funções de densidade de probabilidade. No caso do data1t, os pontos azuis representam a função de probabilidade.
 
 Observamos que todos os histogramas se ajustam às PDFs, médias e variâncias teóricas. Como era de se esperar, em todos os gráficos as médias e variâncias teóricas e estimadas se sobrepõem entre si. No caso de data1q, vemos que o histograma tem uma forma gaussiana simétrica, característica de uma distribuição normal. Para a distribuição uniforme, o histograma mostra uma frequência quase constante no intervalo de valores de 0 a 6, o que se ajusta a sua PDF teórica. No conjunto de dados datay, este só contém valores positivos, onde na frequência decresce ao longo do eixo x, o que se ajusta a uma distribuição exponencial com $`\gamma = 1/3`$. Finalmente, no data1t vemos que o histograma só tem barras nos valores inteiros. Este comportamento é esperado, já que os dados vêm de uma distribuição binomial, que é uma variável discreta.
@@ -184,14 +182,17 @@ As duas funções mostradas no item (d) foram usadas para gerar os 10000 pontos 
 <div align="center">
   <strong>Figura 2.</strong> Frequências relativas das médias e variâncias amostrais obtidas da variável Q para n = 5, 10, 50.
 </div>
+<br></br>
 <img src = 'plots/Xn_statistics.png'>
 <div align="center">
   <strong>Figura 3.</strong> Frequências relativas das médias e variâncias amostrais obtidas da variável X para n = 5, 10, 50.
 </div>
+<br></br>
 <img src = 'plots/Yn_statistics.png'>
 <div align="center">
   <strong>Figura 4.</strong> Frequências relativas das médias e variâncias amostrais obtidas da variável Y para n = 5, 10, 50.
 </div>
+<br></br>
 <img src = 'plots/Tn_statistics.png'>
 <div align="center">
   <strong>Figura 5.</strong> Frequências relativas das médias e variâncias amostrais obtidas da variável T para n = 5, 10, 50. 
@@ -213,8 +214,12 @@ No caso que $W$ seja uma normal, $`S^{2}`$ tem uma distribuição conhecida. Na 
 
 <img src = 'plots/chi2_hist.png'>
 
+<center>
+  
 **Figura 6.** Frequencias relativas $`[\frac{n-1}{\sigma ^{2}}]S^{2}`$ para nas variâncias amostrails do $`\overline{Q}_{n}`$.
 
+</center>
+<br></br>
 Hemos visto que para o caso da média amostral ela se aproxima a uma normal onde a média é a mesma que nas distribuições originais, e para o caso da variância amostral, a expectância delas é igual à variância original, com isso podemos verificar que o TLC se cumpre.
 
 ---
