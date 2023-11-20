@@ -220,7 +220,7 @@ No caso em que $W$ é uma normal, $`S^{2}`$ tem uma distribuição conhecida. Na
 
 </center>
 <br></br>
-Vimos que para o caso da média amostral, ela se aproxima a uma normal onde a média é a mesma que nas distribuições originais, e para o caso da variância amostral, a expectância delas é igual à variância original; com isso podemos verificar que o TLC se cumpre.
+Com isso, se pode observar que na média amostral converge para uma distribuição normal, onde a média e na mesma nas variáveis originais. Para o caso da variância amostral, a expectância se iguala à variância original. Esses resultados permitem validar o TLC e sua capacidade em descrever o comportamento de médias amostrais de diferentes distribuições, e variância amostral no caso na variável aleatória fosse uma normal.
 
 ---
 
