@@ -214,11 +214,12 @@ No caso em que $W$ seja uma normal, $`S^{2}`$ teria uma distribuição conhecida
 
 <img src = 'plots/chi2_hist.png'>
 
-<center>
+<div align="center">
   
 **Figura 6.** Frequências relativas $`[\frac{n-1}{\sigma ^{2}}]S^{2}`$ para as variâncias amostrais de $`\overline{Q}_{n}`$.
 
-</center>
+</div>
+
 <br></br>
 De acordo com o anterior, se pode observar que a média amostral converge para uma distribuição normal, onde a estimativa da média e equivalente ao calculo realizado para as variáveis originais. Para o caso da variância amostral, a expectância e igual à variância original. Esses resultados permitem validar o TLC e sua capacidade de descrever o comportamento de médias amostrais de diferentes distribuições, e variância amostral no caso em que a variável aleatória fosse uma normal.
 
